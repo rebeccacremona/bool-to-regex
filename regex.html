@@ -1,0 +1,66 @@
+<html>
+	
+	<head>
+		<title>Boolean to Regex</title>
+		<link rel="stylesheet" href="regex.css">
+		<script src="regex.js"></script>
+	</head>
+
+	<body>
+		<div id="container">
+			<h1> Convert a boolean search query to a regular expression! </h1>
+			<div id="instructions">
+				
+				<h2> What to type </h2>
+				<ol>
+					<li>
+						<p>
+							Please wrap each search term in double quotes, and capitalize operators.
+						</p>
+						<ul>
+							<li> "spam" AND "eggs"</li>
+							<li> &nbsp;NOT "beans"</li>
+							<li> "tomatoes" OR "bacon" OR "potatoes"</li>
+							<li> "healthy" OR NOT "tasty"</li>
+							<li> "fried eggs" AND "toast" NOT "spam (spam, spam...)"</li>
+						</ul>
+					</li>
+
+					<li>
+						<p>
+							You can use parentheses to group terms.... so long as they aren't nested. 
+						</p>
+						<ul>
+							<li> ("ham" OR "bacon") AND ("spam")</li>
+							<li> ("tomatoes" AND "beans") OR ("spam")</li>
+							<li> ("eggs" AND "toast") NOT ("spam" OR "bacon")</li>
+							<li class="not-allowed">("eggs" AND ("toast" OR "bacon")) AND ("spam")</li>
+						</ul>
+					</li>
+
+					<li>
+						<p>
+							If you use parentheses once, please use them everywhere.
+						</p>
+						</p>
+						<ul>
+							<li class="not-allowed">"eggs" OR ("biscuits" AND "gravy")</li>
+							<li>("eggs") OR ("biscuits" AND "gravy")</li>
+						</ul>
+					</li>
+				</ol>
+			</div> 
+			
+			<h2> Try it!</h2>
+			<div id="action">
+				<label for="query"> Your boolean query:</label>
+				<textarea id="query" autofocus ></textarea>
+				<button onclick="boolToRegex('query','regex');">convert</button>
+				
+				<label for="regex"> ... translated to a regex:</label>
+				<textarea id="regex"></textarea>
+			</div> 
+	</div>
+	</body>
+
+</html>

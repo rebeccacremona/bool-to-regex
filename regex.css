@@ -1,0 +1,37 @@
+div#container {
+	padding-top: 20px;
+	padding-left: 30px;
+	font-family: georgia;
+}
+
+div#container li.not-allowed {
+	text-decoration: line-through; color: red;
+}
+
+div#container div#action {
+	margin-left:15px;
+}
+
+div#container textarea#query {
+	display:block;
+	width: 300px; 
+	height: 100px; 
+	margin-left: 10px; 
+	margin-top: 10px; 
+	margin-bottom: 20px;
+}
+
+div#container div#action button {
+	display:block; 
+	margin-bottom:15px; 
+	font-size:1em; 
+	cursor:pointer;
+}
+
+div#container textarea#regex {
+	display:block; 
+	width: 300px; 
+	height: 100px; 
+	margin-left: 10px; 
+	margin-top: 10px;
+}
